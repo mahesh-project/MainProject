@@ -1,0 +1,50 @@
+<html>
+    <head>
+    {%load static%}
+    
+    <link href="{% static 'style2.css' %}" type="text/css" rel="stylesheet" media="all">   
+
+    </head>
+    <body>
+        
+            <table class="responstable">
+  
+                    <tr>
+                      
+                  
+                      <th>NAME</th>
+                          <th>ADDRESS</th>
+                        
+                          
+                          
+                          
+                          <th>PHONE</th>
+                          <th>####</th>
+                          
+                         
+                      
+                    </tr>
+                    
+                    <tr>
+    {% for ct in items %}  
+        <div class="basic">
+            {% include "admin_header.html" %}    
+        </div>
+        <td>{{ ct.Name}}</td>
+        <td>{{ ct.Address}}</td>
+        <td>{{ ct.Phone}}</td>
+        <td><a href="/verify/{{ ct.id }}">verify</a></td>
+        
+        </tr>
+        
+
+        
+          
+   
+    {% endfor %}
+
+    </table>
+    
+    </body>
+    </html>
+    

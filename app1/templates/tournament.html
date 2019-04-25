@@ -1,0 +1,65 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+            <div class="basic">
+                    {% include "admin_header.html" %}    
+                    </div>
+        <div class="main">
+			
+			<main class="content">
+				<div class="container-fluid">
+
+					
+					<div class="row">
+						<div class="col-12 col-xl-6">
+						<center>
+							<div class="card">
+								
+								<div class="card-body">
+									<form method="post" enctype="multipart/form-data" action="/toursave/">
+                                        {% csrf_token %}
+                                        <div class="form-group">
+											<label class="form-label">Tournament Id</label>
+											<input type="text" name="txtTid" class="form-control" placeholder="Id">
+										</div>
+										
+                                        <div class="form-group">
+											<label class="form-label">Tournament Name</label>
+											<textarea name="txtTname" class="form-control" placeholder="description" rows="2"></textarea>
+                                        </div>
+										
+										
+										<div class="form-group">
+											<label class="form-label">Time</label>
+											<textarea name="txtTime" class="form-control" placeholder="description" rows="2"></textarea>
+                                        </div>
+                                    
+										<div class="form-group">
+											<label class="form-label">Date</label>
+											<textarea name="txtDate" class="form-control" placeholder="description" rows="2"></textarea>
+                                        </div>
+                                        <div class="form-group">
+											<label class="form-label">Type</label>
+											<textarea name="txtType" class="form-control" placeholder="description" rows="2"></textarea>
+                                        </div>
+                                        <div class="form-group">
+											<label class="form-label">Venue</label>
+											<textarea name="txtVenue" class="form-control" placeholder="description" rows="2"></textarea>
+                                        </div>
+										<button type="submit" class="btn btn-primary">REGISTER</button>
+									</form>
+								</div>
+							</div>
+							</center>
+						</div>
+						
+
+				</div>
+			</main>
+			
+		</div>
+	
+    </body>
+</html>

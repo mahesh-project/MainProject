@@ -1,0 +1,45 @@
+<html>
+    <head>
+    {%load static%}
+    </head>
+    <body>
+    {% for ct in items %}  
+            <div class="basic">
+                    {% include "public_header.html" %}    
+                    </div>
+
+<form name="updateddd" method="post">
+			
+			
+                
+    <DIV style="float: left;padding-right:10px;padding-left:50px;margin-left:200px;">
+   
+    
+    
+                
+               
+           
+            
+            
+               
+                <img src="{{ ct.Photo }}" width="300" height="200" />
+                <br>
+                <br>
+                <center>{{ ct.Name}}
+                <br>
+    {{ ct.Discription}}
+                
+           
+                    
+                      <br>
+                   <br> <a href="view_table.php"><font color="#000000" size="+1"><b>view table</b></font></a>
+       
+       </center>
+       
+    </div>
+    {% endfor %}
+
+    </form>
+    </body>
+    </html>
+    

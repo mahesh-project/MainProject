@@ -1,0 +1,74 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+            <div class="basic">
+                    {% include "public_header.html" %}    
+                    </div>
+        <div class="main">
+			
+			<main class="content">
+				<div class="container-fluid">
+
+					
+					<div class="row">
+						<div class="col-12 col-xl-6">
+						<center>
+							<div class="card">
+								
+								<div class="card-body">
+									<form method="post" enctype="multipart/form-data" action="/courtsave/">
+                                        {% csrf_token %}
+										<div class="form-group">
+											<label class="form-label">Category</label>
+											<select name='txtCategory' class="form-control">
+											{% for ct in cat %} 
+											<option value='{{ ct.Name }}'>{{ ct.Name }}</option>
+											{% endfor %}
+											</select>
+										</div>
+                                        <div class="form-group">
+											<label class="form-label">Name</label>
+											<input type="text" name="txtName" class="form-control" placeholder="Name">
+										</div>
+                                         <div class="form-group">
+											<label class="form-label">Location</label>
+											<textarea name="txtLocation" class="form-control" placeholder="location" rows="2"></textarea>
+										</div>
+                                         <div class="form-group">
+											<label class="form-label">Discription</label>
+											<textarea name="txtDiscription" class="form-control" placeholder="discription" rows="2"></textarea>
+										</div>                        
+										<div class="form-group">
+											<label class="form-label">Phone</label>
+											<input type="number" name="txtPhone" class="form-control" placeholder="Phone">
+										</div>
+										<div class="form-group">
+											<label class="form-label">Email</label>
+											<input type="email" name="txtEmail" class="form-control" placeholder="email">
+                                        </div>
+										<div class="form-group">
+											<label class="form-label">Facilities</label>
+											<textarea name="txtFacilities" class="form-control" placeholder="facilities" rows="2"></textarea>
+										</div>
+										 <div class="form-group">
+											<label class="form-label w-100">Photo</label>
+											<input type="file" name="Photo">
+										</div>
+										
+										<button type="submit" class="btn btn-primary">REGISTER</button>
+									</form>
+								</div>
+							</div>
+							</center>
+						</div>
+						
+
+				</div>
+			</main>
+			
+		</div>
+	
+    </body>
+</html>
